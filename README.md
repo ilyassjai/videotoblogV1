@@ -12,7 +12,7 @@ In this presentation, Fran Sharf from Data Chefs discusses Enterprise Intelligen
 
 This summary provides an overview of the key topics covered in the presentation, emphasizing the importance of Enterprise Intelligence in the private equity and investment banking sectors.
 
-![Image](slidemse\slide1.png)
+![Image](slidemse\slide_1.png)
 
 # Private Equity and Investment Banking in Enterprise Intelligence
 
@@ -37,7 +37,7 @@ The Data Chefs are a boutique consultancy based in New York City, specializing i
 
 The Data Chefs are experts in their field, with a strong focus on leveraging data to drive insights and innovation in various sectors including finance, legal, and technology. Their dedication to advancing enterprise intelligence through knowledge graphs and advanced applications sets them apart in the industry.
 
-![Image](./slidemse\slide_2.png)
+![Image](slidemse\slide_2.png)
 
 ## Investment Banking Overview
 
@@ -53,7 +53,7 @@ In the banking domain, companies are the central entities that investment banker
 
 In summary, investment banking plays a vital role in the financial ecosystem by connecting companies with the necessary capital and expertise to support their growth and strategic initiatives.
 
-![Image](./slidemse\slide_3.png)
+![Image](slidemse\slide_3.png)
 
 ## Private Equity Overview
 
