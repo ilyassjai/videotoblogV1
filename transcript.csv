@@ -1,0 +1,145 @@
+start,end,text
+9.719,36.6,hey we are live it seems so hi everyone good morning or good afternoon uh depending where you are good night maybe um I am
+21.72,42.958,Fran sharf uh from the data chefs and happy to be here to present today at the C Forum second presentation at the knowledge craft
+33.559,57.599999999999994,Forum so this is exciting and today I'm going to discuss Enterprise intelligence um applications in the private Equity um Investment Banking uh
+45.8,70.399,industry I use these two terms private Equity Investment Banking a little interchangeably there's certainly some um differences to them but you will hear you will hear that so basically this
+57.879,82.601,presentation uh will relate uh is the the story uh of uh Consulting engagement that we've had uh with the data chefs where this firm came to us uh large
+70.4,94.19900000000001,Investment Banking firm came to us and asked us to help them with organizing their Enterprise data um as uh they wanted more agility in application
+81.96,102.041,development uh with uh their data um so uh before diving into what we did we will see uh first present what is
+92.56,114.56,uh private equity and Investment Banking what is that uh what is that that they're doing the customer um and what is enterprise intelligence uh in that
+102.88,125.079,context um and then we will describe uh three applications that we developed one is an email alert application uh second one is a leits uh application for
+114.399,137.4,investment bankers and the third one is a private Enterprise social uh netw n work for for the bank and all of that was built uh in parallel to building a
+125.68,148.799,knowledge graph that expanded uh as we uh added more data sources uh that gave us the possibility to be build this more and more advanced applications U as we
+136.92,157.44,went um and uh finally I'll give some maybe a little more technical details about the knowledge craft and how we uh integrated it as well in The Wider
+147.879,169.79899999999998,Enterprise ecosystem so there were two efforts right like building the knowledge graph and expanding it in size but also uh integrating it more with the
+157.64,181.558,uh Enterprise uh information system but first a few words of the context so we are the data chefs uh open for work we are a boutique consultancy we're based in New York City started in
+173.519,198.12,2017 and we're specialized in Enterprise data management we have had clients in finance legal and Technology domains but we're open to work with others um and we
+185.319,208.67999999999998,are a network of chefs uh experts Consultants um in our area uh with um a large experience uh both in uh time and
+197.08,217.359,in skills uh and we're especially focus on semantic Technologies knowledge graphs anology and taxonomy data management in general as you will see here today and we provide a range of
+207.879,231.28,consulting services from hands on te ology development uh technical mentorship proofs of Concepts uh we also uh are well versed in machine learning uh develop knowledge graphs learn on
+218.72,242.078,them do analytics on the graphs Etc uh our current focus is on studying the impact of llms on the onology development life cycle this is uh research projects we're uh
+233.28,258.041,conducting so the context the private Equity uh investment banking at a global scale so our client uh is a bank with a few thousand Bankers right so it's a
+245.28,268.679,fairly large investment Banks uh they have offices across five continents uh and bankers are located in these different offices uh Bankers are
+257.04,278.161,specialized either uh in a region or in an industry or a sector right so they have different kind of specialty that can overlap sometime um and their job is
+268.24,288.68,mainly tracking companies right to do financing and we will come back on that uh uh so uh the main entity we have to work with is companies there are three
+277.96,299.32,about wide estimate 333 million companies worldwide which is a lot of companies and so tracking all of them uh is very difficult to do manually um
+288.8,309.44,hence uh the advantage of you know using data and Automation in order to to do that job but let's dive a little bit deeper into what that job actually is
+298.68,322.519,right so um in private Equity uh we're dealing with a A word of private companies right opposite to public companies which are companies that are listed on the stock exchange somewhere
+311.6,331.68,um when you're listed on the stock exchange uh if you want to finance your company you issue more stock you sell stock uh on the exchange on the marketplace and you get money in return
+321.479,343.919,for this little share of your company right uh when you're a private company you don't have access to that so you have to go to c a banker and say I am I need money to do X and Y um will you
+332.84,354.15999999999997,lend me money and so that's where the investment bankers are coming in and they look uh if you know the project for uh that the company has is viable what
+343.0,368.44,do they get in return is it worth it um etc etc and they get paid by getting a percentage on the transaction right maybe 3% of the transaction will go to the bankers so if you imagine a100
+355.479,381.679,million transaction which is nothing big uh like EXT extraordinary um that's for one transaction you're getting 3 million at the end so it's uh it's quite a profitable um uh
+368.199,388.76,job um another scenario is companies uh getting acquired or getting sold right uh and companies acquiring other uh other companies so uh Banks themselves
+379.56,402.12,acquire companies they they just buy these companies and they uh they transform them they sell them again hopefully on a margin um and but companies are also sold or bought
+390.4,411.39799999999997,regularly right so larger like Google will buy a smaller startup right for example and uh in every of these operations you you have investment bankers that are there and that come in
+400.639,423.599,and acquire and sorry are are helping with the process and so there are in this job there are really two components there's a social component being there and knowing that a deal is going to
+412.599,435.961,happen or facilitating a deal right talking to a company knowing that they want to be sold and talking to another company that may be interested in buying in and then facilitating that transaction so that's very social that's
+424.0,444.64,you know calling friends and colleagues playing golf with CEOs and these kind of activities and the second aspect is number crashing so uh you have to
+434.96,456.12,understand the finances for the companies you have to build the deal right all this like it's it's all Financial it's all Excel um and it's a lot of work that has to happen very uh
+445.08,468.91999999999996,in a very short period of time um so here it is for the context so really the main entity type in the investment banking domain is the company right this it's all about studying
+456.84,478.438,companies and and the network of people around the company is also important so we came in um and uh we offer this vision of uh building a large
+471.599,491.759,Enterprise knowledge graft from the company which was at the time uh building a data so it was on the process of building this Enterprise data Lake uh
+480.96,501.921,and we came in at that point and we uh you know jumped in on that uh process and uh did some added value through the knowledge
+491.12,511.358,graphs and uh so they have a lot of different data sources with internal data sources uh they buy also data through apis data sets that are
+501.159,523.6,regularly updated um you know plenty of different uh uh software sze software that generate data that consume data um your typical you know fairly large
+512.839,533.2,Enterprise um information system uh and they had started to put in place some processes around data quality data governance uh and MDM but it was
+523.64,548.84,also interesting because we were also at that moment where these process were still being set up so we U you know we had an influence uh in in that uh how it will operate and and also um interact
+535.88,560.319,with the the knowledge grow so we have a methodology uh uh it is uh fairly simple uh in order to be flexible
+548.12,570.841,but the general idea is to start small uh when doing a Knowledge Graph project uh because if you want to do the build the ideal Knowledge Graph in an Enterprise uh large information system
+559.6,580.0790000000001,it is a tremendous amount of work right like there are many many data sources there are many domains uh that need to be integrated um you know the
+569.839,594.72,the work of building these Integrations doing you know developing the onology uh is large um and what you you know you you can always maybe find someone uh an
+582.36,607.279,executive that will sign you know this million dollars check over several years and um that will commit to it but this is a rare thing usually Pro projects are
+594.56,615.959,are progressive and step by step so you need to start small and show value uh very quickly so the first project should be an enduser application when you're building your knowledge graph
+604.959,627.761,you're not delivering a small Knowledge Graph you're delivering an end user application that make use of the knowledge graph once you have success there you've shown that you're able to develop something useful then you scale
+617.24,638.239,you expand the knowledge graph you expand the knowledge the the domain uh and you quickly prove that as you do that expansion uh it becomes easier to
+626.64,650.241,develop application uh to have new WIS for the graph uh as you um add data sources to this existing Knowledge Graph so um you prove that the cost of
+639.12,660.759,developing new application is lower and is lower as you expand the graph and once so once you have you know this one two three uh smaller
+649.88,670.001,applications then you go for the bigger one more ambitious project at that stage you should have reached a fairly large maturity level for your graph
+663.16,685.04,so this is what we did um and the first uh the first project we uh undertook was uh the an email alert uh project so back
+674.519,694.92,to the context of the investment banker uh so they want to follow companies and it's a job where regularly they need to check the news and get in touch with the
+685.04,711.68,executives at the company to say hey you know I've seen you're doing this you know maybe you would be interested in my services for that right so uh here we designed an alerting system that would
+697.24,718.199,uh based on um some interesting news uh that around companies would you know uh alert the banker and give them uh the
+708.92,735.401,opportunity to send an email to an executive at the company right uh so in input we had a banker companies of interest uh that would um watch news uh
+722.0,747.2,um being added to the knowledge graph uh and uh in return in output um send an alert to the banker with an email template so they would just have to personalize it and click and to send an
+733.92,756.039,email uh to um get in touch with the client or potential client so that could be something like um they have a new Financial Chief Financial Officer or
+745.199,771.28,they've ra like large startup go series C serc round of funding um Etc so uh important news not not worthy uh uh news
+758.12,785.84,uh there so for this we plugged an internal database of the uh clients and interest Bankers interest uh together with a news um company news uh that we
+772.44,793.96,plug from a service uh we integrated those in the knowledge graph and then build all the pipelines around this uh in order to uh develop that um that
+783.0,804.6,system so I mentioned uh the companies the bankers follow uh company news we had to develop an ontology to represent that companies persons news events we
+794.68,818.2389999999999,build the data Integrations and pipelines to the knowledge graph to injest this data in the knowledge graph all the mapping infrastructure to um you know match the different um the data
+806.399,830.44,sources to get entities in different data sources and generated this alerting system in output so that was a win um they were happy with it uh and now they started to
+820.24,845.081,come with uh other requests uh and the second request was um more investigative so there are companies that I follow but there are also companies that I don't know about and so if you're a certain um
+833.16,858.12,Banker working in a geographical sector or working in a specific industry domain you always always are on the lookup for new companies in that domain and so they would come up with a
+845.24,867.559,few criterias depending on their job and their role and their domain um and saying okay here are my criterias can you find relevant companies for me and these criterias would evolve would
+856.72,879.6410000000001,change across Bankers um Etc so that that was the second project was U was to do this so here is an example of criterias
+866.92,887.639,for an it Banker right specialize in it uh so country in the United States information technology is the industry uh sector for the companies uh they have
+878.639,899.32,different like types of financing uh statuses that they're interested for the companies ownership statuses so basically they're interested in all sorts of private companies that are of a
+888.32,912.918,certain size Etc some more uh detailed complex like financially related uh criterias that they have um and so combine all that right was the set of
+900.839,921.681,criterias that you know they wanted to find companies for so what we did is we added more uh data to the existing Knowledge Graph so
+911.88,937.759,we had this internal database that was already good source uh the news were still there and we we added like a large um vendor uh uh like private um private
+924.199,947.079,companies uh database right uh from that we would get from a vendor so that we integrated to the knowledge graph and here's you see on the right this is an example of a sparkle query
+936.399,958.599,that translates these criterias basically in in Sparkle right so so we could run these queries either on demand uh there was uh we developed this app uh
+947.279,976.48,so there's this app where they can select the criterias or change some criterias right like so they can vary the status the industry um depending on what they're interested in so um
+960.56,985.1179999999999,yeah so that was basically it um now uh what we realized then uh was we could also take this and um add it to the email alert system right and so instead
+973.839,997.561,of being just alerts based on the company they follows we could also have alerts based on um their criteria so if the CEO change is at the company that
+986.04,1007.12,they don't necessarily follow but we uh is according to their criterias right then they would get an alert and would be able to then send an email to uh to the
+996.04,1017.8,CEO uh so great this they were very excited about that but then the problem became well if I don't know the company how will I send an email to the CE if I if I'm not in touch with with them you
+1007.16,1029.56,know how is this going to work um and usually the way they do that is they call their friends uh you know walk to the office next door and uh ask uh will you know do you do you you know this
+1019.0,1044.958,compan do you know someone who worked there they use LinkedIn um oh I see my picture has turned somehow this is weird Okay um
+1032.24,1054.081,hi uh it's a little weird anyways um so what they needed there so yeah so until now it was basically like using tools manually talking to people
+1047.079,1069.48,calling others sending an email hey do you know someone there oh I've seen X is working there and you know that kind of uh that kind of process and so they
+1057.16,1079.758,asked us if we could um you know build something uh more automated on that um such as an Enterprise social network on top of that so so that was the larger uh
+1068.919,1095.5210000000002,project we did as it required to significantly uh scale the knowledge graph to several billion uh triples um and we added more data sources uh we we
+1082.12,1103.08,had interaction models so uh because so when you build this type of network so the the network there is fairly simple right it is um people and companies and
+1093.12,1115.56,uh especially Executives who work and have roles at companies their history of their work right so they used to work in other places and then plugging that on that all the bank social networks so all
+1104.08,1126.759,the bankers uh and their relationships with the people in that you know Global uh companies network uh so we built some um models that would measure the relationship strength in order to be
+1115.799,1138.399,able to calculate you know what are the warmest path from one person to the other so Banker Bankers X want to get in touch with CEO of company why what is
+1126.679,1152.0,the shortest path uh what is the warmest and path in order to be able to to reach that person and so the knowledge graph there uh you know it required quite some
+1138.6,1160.6409999999998,infrastructure in order to scale we uh developed we we developed um an application both like a mobile application uh and uh a desktop application that will allow you to
+1153.2,1176.3590000000002,search for a person uh and then get contacted to that uh to that person like get see the shortest path to reach out to that person but also um that
+1165.08,1186.32,infrastructure then became in place and we could use the data in the previous applications in order to uh recommend how to get in touch with the person
+1174.44,1195.0,based on an alert uh or a criteria search uh so that's uh that's basically it for the applications uh I mentioned we uh also got integrated in the
+1188.52,1210.319,Enterprise ecosystem so as we did all that process you know the knowledge graph fun uh it's placed on top of the data Lake uh right so we would consume the good quality data but we would also
+1199.48,1220.481,perform our own quality analysis on the data and report that back to the data quality team so that was this like this nice look happening uh data governance we integrated with the data governance
+1209.76,1231.64,software so that the terms uh concepts and properties in the ontologies were connected to the data sources um to which we had written these mappings to
+1220.64,1243.8400000000001,the knowledge graph so all was governed uh into the uh is governed I don't know where used the pass there is govern according to the um data governance policies that are in place same with the
+1232.6,1254.119,data Master data management right we helped with the dcft because we did a lot of data integration in the knowledge graph that helped to build this list that were uh that are then maintained uh
+1242.6,1263.961,in the in the MDM uh software um and then we uh we built several uh access points to for in order for data science team to access the data and consume it
+1254.0,1278.48,both through apis but also we plug that to data bricks that that is used quite quite a lot in the companies so the the graph data could be processed to um write models and train
+1265.48,1285.679,models we use prot for the onology we use pool party for the taxonomy we built a very large industry taxonomy or very
+1275.64,1295.681,um comprehensive uh industry taxonomy and the graph scale to a few to several billion triples was sced on a
+1286.12,1314.319,cluster of allegrograph DBS and computed uh uh we had quite some computations happening for the The Social Network in order not to have to actually ask Sparkle queries every time
+1298.76,1320.24,an user would tap uh on on an app uh um but having some pre-computations of path uh uh in shortcuts in the graph uh and
+1310.679,1336.0790000000002,we buil all these data in pipelines um and provided apis I mentioned that uh so thank you uh for your attention um we're
+1321.64,1343.481,here to help um open for projects uh and um thank you if you have questions uh we're here um I'm not sure how questions are
+1346.96,1369.4,working oh I see the chat question from Theodora hey um the social component you mention what was your major challenge during
+1358.48,1382.759,that test knowledge into formal descriptions what was your approach to capture that particular type of knowledge right um so
+1370.039,1393.6,I think that application had two um uh two uh challenges one was the scale SC right so the the scale of both
+1381.2,1401.64,the data but also uh the usage of this data was a step up uh so we had to do work on optimization going to a cluster
+1392.12,1413.76,pre-computing uh some of the path Etc but I think your question really is on the um on how to extract the tcid knowledge of people knowing each other
+1402.44,1427.279,or not uh so luckily we we had access to emails um and so in emails there's uh there's you can extract the metadata network of emails um which is what we
+1415.159,1435.679,did and using so we built a model uh machine learning uh we use machine learning to build a model of how warm is a relationship between two persons based
+1425.6,1447.1209999999999,on the the patterns of email communication you know how often and how old or how recent they are uh and that that that works pretty well we also use
+1435.88,1462.4,some um software uh that that does this there's something like a specialized Investment Banking software called introhive that um helps also uh with these kind of uh
+1448.44,1468.48,things uh and then uh yeah then that that was pretty that that that was the the kind of tcid knowledge we used the rest was really
+1459.6,1481.76,explicitly you know uh included like the roles who work when and and where U Bob wants to do about wants to know about what we did with po party
+1470.48,1495.159,compare with what we use prot for yes uh so we we started with prot and uh which was okay for the onology development uh but uh for the taxonomy
+1482.799,1505.599,and managing the taxonomy so we built a whole industry coverage uh set of taxonomies for each industry uh that was a large project um uh involving a lot
+1494.2,1517.881,you know a lot of time uh put and uh uh basically P party gave us more agility more convenience uh in in development um so that's uh that's what um that's what
+1505.72,1528.88,it gave us um p is is a clumsy piece of software I'm not actually sure it's even maintained anymore now uh but I think uh
+1517.72,1539.72,yeah the space is right for a new open source onology development software if you want my take on this uh Hussein uh has two question what was your strategy
+1529.24,1551.2,for prioritizing the sources the external ones to incorporate into the knowledge WRA uh so uh that's a great question the question of prioritizing The Source here and this is part of our
+1540.08,1565.1589999999999,methodology right it really is uh related to the application what is your application what are we trying to achieve what is the service we want to provide to the client and so then you start there and then you walk back to
+1552.159,1574.7990000000002,the data uh identifying the data sources um so we have you know we do interviews you know in order to achieve that identifying you know what are the data elements where do we find these data elements uh and what data sources are
+1564.08,1585.039,are the relevant ones and then we we add them like this so we we really follow the application uh to uh the alert system is yeah it's purely rule based
+1574.399,1596.4799999999998,the the alert system we we did for worthy news it uses it purely uses Sparkle uh naso hi naso how did you deal
+1585.36,1610.0,with the kg governance in this project how are you managing updates from external uh data sources so we had Chron um uh so regularly I I think I mentioned
+1597.039,1621.2,moft moft is a data pip plans uh software that allows you to run jobs that import you know inest data every now and then um into the data we had uh
+1609.2,1629.9180000000001,we have developed our own identifier uh mapping system that um that tracks uh where where are the data sources uh
+1620.159,1643.921,taken from what are the identifiers what is the what is the the the core identifier for a special entity uh so this was pretty cool uh I mean this is
+1631.0,1654.28,uh still uh in use uh um pretty cool uh technology so uh which is basically a large table uh in data bricks very large table mapping identifiers to the
+1643.08,1669.759,different identifiers in the different sources um yeah so yeah for the entity matching uh we what did we do I think most of it
+1656.799,1677.32,we managed to do through identifiers uh and email address being one identifier right so for people we had this email was you know a good
+1666.96,1692.319,identifier uh and we did some matching as well we used some matching software uh we had a data quality team that you know did some manual validation so classical uh anti matching record
+1679.48,1702.3990000000001,linkage uh process there thank you all if you have any other question I think there's one minute but otherwise thanks

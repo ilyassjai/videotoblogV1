@@ -1,0 +1,62 @@
+{
+    "0": {
+        "path": "./slidemse/slide_0.png",
+        "start": 0,
+        "end": 21.64,
+        "descrp": "Enterprise Intelligence\nApplications in the\nPrivate Equity Industry\n\nFrancois Scharffe\nCEO, The Data Chefs\nKnowledge Graph Forum 2023\n\nGiri\n\n"
+    },
+    "1": {
+        "path": "./slidemse/slide_1.png",
+        "start": 21.64,
+        "end": 85.56,
+        "descrp": "Outline\n\nPrivate Equity and Enterprise Intelligence\n\nEmail Alerts\n\nLeads for Private Equity Investment Bankers\n\nPrivate Social Network / aka Linkedin for the bank\n\nIntegration of the Knowledge Graph in the wider Enterprise Data Ecosystem\n\n"
+    },
+    "2": {
+        "path": "./slidemse/slide_2.png",
+        "start": 85.56,
+        "end": 232.96,
+        "descrp": "Context:\nPrivate Equity Banking\nat a Global Scale\n\n"
+    },
+    "3": {
+        "path": "./slidemse/slide_3.png",
+        "start": 232.96,
+        "end": 298.36,
+        "descrp": "Investment Banking\n\nbout getting di\n\nLending them money\nHelping them acquiring or getting\nInvestment Banking is a mix of\nA social component: being there at the\nright time for when the deal comes A\n\nAnumber crushing component: do the\nmath, excel at Excel, fast and c\n\nThe main entity ty\n\nbanking domain is the company\n\nFinanc are obviously key\n\n"
+    },
+    "4": {
+        "path": "./slidemse/slide_4.png",
+        "start": 298.36,
+        "end": 464.08,
+        "descrp": "The Vision:\nConnecting The Firm\u2019s\nData Ecosystem\n\nThe long term goal is to create an enterprise\nknowledge graph\nSits on top of the enterprise data\nles internal databa\n\nMDM\nIntegrate: jor applications,\ne.g. Salesforce\n\nkwoweoce\nG@rorin\n"
+    },
+    "5": {
+        "path": "./slidemse/slide_5.png",
+        "start": 464.08,
+        "end": 539.0,
+        "descrp": "Methodology: Where to Start?\n\n1. Start small and scale\n\n2. The first project should be an end user application\n3. Scale the knowledge graph and expand the domain\n4. Prove quickly that every additional integration will be easier\nthanks to the knowledge graph\n\nThen after a couple wins aim for a more ambitious project\n\n"
+    },
+    "6": {
+        "path": "./slidemse/slide_6.png",
+        "start": 539.0,
+        "end": 813.56,
+        "descrp": "Banker\nInterest\nCriterias\n\nBese\u201d\n\n"
+    },
+    "7": {
+        "path": "./slidemse/slide_7.png",
+        "start": 813.56,
+        "end": 1150.64,
+        "descrp": "Going Bigger: A Social Network\n\ne The social graph reuses all data sources integrated in the\nprevious two applications.\nAdds several new sources to the graph.\nAdds a significant scale and performance\ncomponent.\nTwo applications; one for mobile, one on desktop\nA connected user can ask how to contact X, or how to\nreach an exec at company Y, or how to get a list of\ncontacts for companies under these criterias.\n\n"
+    },
+    "8": {
+        "path": "./slidemse/slide_8.png",
+        "start": 1150.64,
+        "end": 1182.04,
+        "descrp": "Going Wider: Integration in the Enterprise IS\n\nFor any KG project to be sustainable it needs to be integrated in the overall enterprise\ninformation system. We did this through the following means\nData Lake: the knowledge graph sits on top of the data lake.\nData Quality: the knowledge graph data is at the output of the data quality process. We\nalso perform data quality checks (SHACL) and report back to the DQ team.\nData Governance: Ontology and taxonomy terms integrate with the Data Governance\nsoftware so that KG mappings align with metadata fields\nMaster Data Management. The knowledge graph offers unique identifiers for resources\nthat are then consigned in the MDM software. There is a 2 way communication between\nthe KG and the MDM software to ensure consistency.\nData Science. The KG can be exported to Databricks Graph Frames that then get used\nto write models for predictive analytics.\n\n"
+    },
+    "9": {
+        "path": "./slidemse/slide_9.png",
+        "start": 1182.04,
+        "end": 1315.32,
+        "descrp": "The Data Chefs: We\u2019re Here To Help\n\nThe Data Chefs came in and performed:\nThree data intensive applications were developed\nA large graph, ontology and taxonomy were built\nAll inserted in the enterprise data ecosystem\nWe hired a team, and trained existing team members\nWe have e: rience doing this for various applications domains\n\nContact us by visiting\n\nIne VAIAL\n\n"
+    }
+}
