@@ -1,5 +1,12 @@
-psutil
-pytube
 pandas
+pytube
+cv2
+numpy
+pytesseract
+python-dotenv
+psutil
+tqdm
 faster-whisper
-opencv-python
+youtube-transcript-api
+langchain
+langchain-openai
