@@ -12,7 +12,7 @@ In this presentation, Fran Sharf from Data Chefs discusses Enterprise Intelligen
 
 This summary provides an overview of the key topics covered in the presentation, emphasizing the importance of Enterprise Intelligence in the private equity and investment banking sectors.
 
-![Image](./slidemse\slide_1.png)
+![Image](https://github.com/ilyassjai/videotoblogV1/blob/main/slidemse/slide_1.png)
 
 # Private Equity and Investment Banking in Enterprise Intelligence
 
@@ -37,7 +37,7 @@ The Data Chefs are a boutique consultancy based in New York City, specializing i
 
 The Data Chefs are experts in their field, with a strong focus on leveraging data to drive insights and innovation in various sectors including finance, legal, and technology. Their dedication to advancing enterprise intelligence through knowledge graphs and advanced applications sets them apart in the industry.
 
-![Image](./slidemse\slide_2.png)
+![Image](https://github.com/ilyassjai/videotoblogV1/blob/main/slidemse/slide_2.png)
 
 ## Investment Banking Overview
 
@@ -53,7 +53,7 @@ In the banking domain, companies are the central entities that investment banker
 
 In summary, investment banking plays a vital role in the financial ecosystem by connecting companies with the necessary capital and expertise to support their growth and strategic initiatives.
 
-![Image](./slidemse\slide_3.png)
+![Image](https://github.com/ilyassjai/videotoblogV1/blob/main/slidemse/slide_3.png)
 
 ## Private Equity Overview
 
@@ -71,7 +71,7 @@ Private equity also involves companies acquiring or selling other businesses. In
 
 Success in private equity requires a blend of social skills and financial acumen. Building relationships, identifying potential deals, and crunching numbers are all part of the job.
 
-## The Vision: Connecting The Firm’s Data Ecosystem
+## The Vision: Connecting The Firmâ€™s Data Ecosystem
 
 The long-term goal is to establish an enterprise knowledge graph that integrates with major applications like Salesforce. This graph will sit atop the firm's data infrastructure, enhancing data management and decision-making processes.
 
@@ -83,7 +83,7 @@ Master Data Management (MDM) plays a key role in integrating various data source
 
 By following these guidelines, the text has been transformed into a concise and structured Markdown format suitable for a blog post.
 
-![Image](./slidemse\slide_4.png)
+![Image](https://github.com/ilyassjai/videotoblogV1/blob/main/slidemse/slide_4.png)
 
 # Transforming Transcribed Text into Markdown for a Blog
 
@@ -100,7 +100,7 @@ After achieving initial successes, the company can aim for more ambitious projec
 
 By following these steps, the company was able to infuse added value into their data processes and accelerate their journey towards a more robust and efficient data ecosystem.
 
-![Image](./slidemse\slide_5.png)
+![Image](https://github.com/ilyassjai/videotoblogV1/blob/main/slidemse/slide_5.png)
 
 ## Knowledge Graph Project Strategy
 
@@ -124,7 +124,7 @@ The project involved integrating banker interests, company news, and internal da
 
 By following a progressive and iterative approach, organizations can effectively harness the power of Knowledge Graphs to enhance decision-making and drive innovation in their operations.
 
-![Image](./slidemse\slide_6.png)
+![Image](https://github.com/ilyassjai/videotoblogV1/blob/main/slidemse/slide_6.png)
 
 # Transforming Transcribed Text into Markdown Format for a Blog
 
@@ -151,7 +151,7 @@ The development of this social network within the banking sector marked a signif
 
 By following these guidelines and structuring the content accordingly, we have successfully transformed the transcribed text into a concise and informative Markdown format suitable for a blog post.
 
-![Image](./slidemse\slide_7.png)
+![Image](https://github.com/ilyassjai/videotoblogV1/blob/main/slidemse/slide_7.png)
 
 # Integrating Knowledge Graphs in Enterprise Information Systems
 
@@ -179,7 +179,7 @@ Exporting the KG to Databricks Graph Frames empowers the creation of predictive 
 
 By adhering to these integration practices, organizations can optimize the utility and effectiveness of their Knowledge Graph initiatives within the broader enterprise context.
 
-![Image](./slidemse\slide_8.png)
+![Image](https://github.com/ilyassjai/videotoblogV1/blob/main/slidemse/slide_8.png)
 
 ## The Data Chefs: Transforming Enterprise Data Ecosystem
 
@@ -211,5 +211,5 @@ For further inquiries and to experience the transformative power of the Data Che
 
 By aligning the text with the guidelines provided, the summary has been enhanced to offer a more concise and structured overview of the Data Chefs' impact on the enterprise data ecosystem.
 
-![Image](./slidemse\slide_9.png)
+![Image](https://github.com/ilyassjai/videotoblogV1/blob/main/slidemse/slide_9.png)
 
