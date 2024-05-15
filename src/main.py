@@ -21,9 +21,9 @@ if __name__ == "__main__":
     md_paths = [f"output{i}.md" for i in range(len(image_paths))]
 
     #start
-    #llm = ChatOpenAI(openai_api_key=openai_api_key,model="gpt-3.5-turbo",temperature=0.5)
-    #df_slides=videotodataframe(url)
-    #chat(llm,df_slides)
+    llm = ChatOpenAI(openai_api_key=openai_api_key,model="gpt-3.5-turbo",temperature=0.5)
+    df_slides=videotodataframe(url)
+    chat(llm,df_slides)
     merged_md = merge_markdown_with_images(md_paths, image_paths)
 
     with open("merged_output.md", "w") as f:
