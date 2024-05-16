@@ -61,7 +61,6 @@ def process_youtube_link():
     youtube_link = data.get('youtubeLink')
 
     load_dotenv()
-    os.environ['OPENAI_API_KEY'] = 'sk-proj-UDfHlTwwCvVi9IbX0laOT3BlbkFJUDCLXgNqtUgJQkPp7ypb'
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Users/sbcodes/Downloads/v2bdb-423513-c5346e202132.json'
     openai_api_key = os.getenv('OPENAI_KEY')
 
