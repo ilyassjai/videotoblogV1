@@ -9,7 +9,7 @@ from youtubeAPI import *
 
 
 # Set the tesseract path in the script before calling image_to_string
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = '/opt/homebrew/bin/tesseract'
 #
 
 def extract_text_from_image(image_path):

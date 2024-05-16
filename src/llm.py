@@ -31,13 +31,14 @@ def chat(llm,df_slides):
             transcript_with_name = transcript
             position = "beginning" if i==0 else "middle" if i<df_slides.shape[0]-1 else "end"
             text=f"""
+            # Title of the Article
 
             Here is a transcribed text, which is part of a larger video:
             The transcription is : {transcript_with_name}
             The transcription is at the {position} of the blog post
             The text in the slide is : {description}
 
-            Your task is to transform it into an Markdown format suitable for a blog. Your goal is to create a clear and concise summary while following the guidelines below:
+            Your task is to transform it into a Markdown format suitable for a blog. Your goal is to create a clear and concise summary while following the guidelines below:
             - Use the memory to keep track of the history of your previous outputs.
             - Eliminate verbal tics.
             - Take note of the position to insert the text in the blog post.
@@ -45,6 +46,10 @@ def chat(llm,df_slides):
             - Insert section headings and other formatting as needed.
             - Avoid redundancy and extraneous information.
             - Ensure the final output is suitable for inclusion in a textbook.
+            - Write it in the form of a real blog article.
+            - Do not include a presentation summary.
+            - Include the title of the article at the top.
+            - Include only one general conclusion for the blog at the end.
             
             """
 
