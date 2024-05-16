@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from langchain.memory import ConversationBufferMemory
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
+from google.cloud import storage
 
 
 
@@ -86,6 +87,19 @@ def chat(llm,df_slides):
             print("error")
             print(output)
             continue
+
+def get_image_url(bucket_name, blob_name):
+    # Create a client
+    client = storage.Client()
+
+    # Get the bucket
+    bucket = client.get_bucket(bucket_name)
+
+    # Get the blob
+    blob = bucket.blob(blob_name)
+
+    # Return the blob's public URL
+    return blob.public_url
 
 
 
