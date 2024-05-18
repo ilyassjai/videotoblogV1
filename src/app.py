@@ -12,6 +12,8 @@ import os
 import glob
 from dotenv import load_dotenv
 from datetime import timedelta
+import pytz
+
 
 app = Flask(__name__)
 CORS(app)
@@ -22,6 +24,10 @@ ALLOWED_EXTENSIONS = {'mp4', 'mov', 'avi'}
 
 # Function to get the title from merged_output.md
 def get_title_from_md_file(md_file_path):
+    if not os.path.isfile(md_file_path):
+        print(f"File does not exist: {md_file_path}")
+        return None
+    
     with open(md_file_path, 'r') as f:
         lines = f.readlines()
 
@@ -65,7 +71,7 @@ def process_youtube_link():
     openai_api_key = os.getenv('OPENAI_KEY')
 
     image_paths = [file for file in glob.glob(os.path.join('./slidemse', '*.png'))]    
-    md_paths = [f"output{i}.md" for i in range(len(image_paths))]
+    md_paths = [f"outputs/output{i}.md" for i in range(len(image_paths))]
 
     #start
     llm = ChatOpenAI(openai_api_key=openai_api_key,model="gpt-3.5-turbo",temperature=0.5)
@@ -73,7 +79,6 @@ def process_youtube_link():
     chat(llm,df_slides)
     merged_md = merge_markdown_with_images(md_paths, image_paths)
 
-    title = get_title_from_md_file("merged_output.md")    
     
     # Connect to Firestore
     db = firestore.Client()
@@ -90,6 +95,8 @@ def process_youtube_link():
         destination_blob_name = f"{directory_name}/{os.path.basename(image_path)}"
         upload_blob(bucket_name, image_path, destination_blob_name)
 
+    destination_blob_name = None
+
     for i, image_path in enumerate(image_paths):
         # Create a directory named after the article ID
         directory_name = f"{article_id}"
@@ -104,8 +111,12 @@ def process_youtube_link():
     thumbnail_url = get_image_url(bucket_name, destination_blob_name)  # Use your existing function
 
     # Write the merged markdown to a file
+    
     with open("merged_output.md", "w") as f:
         f.write(merged_md)
+    title = get_title_from_md_file("merged_output.md")    
+
+    timestamp = datetime.now() + timedelta(hours=5.5)
 
     # Store the results of the API call in Firestore
     doc_ref = db.collection('articles').document(article_id)
@@ -113,9 +124,19 @@ def process_youtube_link():
         'id': article_id,
         'title': title,  # Replace with your actual title
         'content': merged_md,  # Replace with your actual content
-        'date_created': datetime.now(),
+        'date_created': firestore.SERVER_TIMESTAMP,
         'thumbnail_url': thumbnail_url,
     })
+
+    # Delete the temporary files
+    for file in md_paths:
+        os.remove(file)
+
+    for file in image_paths:
+        os.remove(file)
+
+    # Delete the merged markdown file
+    os.remove("merged_output.md")    
 
     return jsonify({'message': 'Processing completed!', 'article_id': article_id})  
 
