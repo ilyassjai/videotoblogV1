@@ -67,11 +67,11 @@ def process_youtube_link():
     youtube_link = data.get('youtubeLink')
 
     load_dotenv()
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/Users/sbcodes/Downloads/v2bdb-423513-c5346e202132.json'
+    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'src/v2bdb-423513-c5346e202132.json' 
     openai_api_key = os.getenv('OPENAI_KEY')
 
     image_paths = [file for file in glob.glob(os.path.join('./slidemse', '*.png'))]    
-    md_paths = [f"outputs/output{i}.md" for i in range(len(image_paths))]
+    md_paths = [f"output{i}.md" for i in range(len(os.listdir('./slidemse')))]
 
     #start
     llm = ChatOpenAI(openai_api_key=openai_api_key,model="gpt-3.5-turbo",temperature=0.5)

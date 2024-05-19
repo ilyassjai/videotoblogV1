@@ -1,6 +1,6 @@
 pandas
 pytube
-cv2
+opencv-python
 numpy
 pytesseract
 python-dotenv
