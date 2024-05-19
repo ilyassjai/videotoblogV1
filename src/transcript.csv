@@ -1,18 +1,26 @@
 start,end,text
-0.24,20.881,i am the founder and the program chair of the knowledge craft conference and i wanted to give you a few words about the knowledgecraft conference 2022 which is
-10.0,32.16,coming in may on may 2nd to 5th and this year uh the conference will be back in person in new york city at cornell tech uh which is a beautiful
-22.16,42.879999999999995,campus in the heart of new york city that you can uh see there between manhattan and brooklyn on roosevelt island so we're excited about
-32.32,54.32,partnering with coronel tech for the conference next year the second thing i wanted to tell you is that the call for presentation is open for the conference
-43.52,67.12,so i wanted to give you a few words about the conference and the program how to submit if you go to our website you will find a link up here with the call for presentation there's a
-54.96,75.12,form you can submit your proposal for a we're also welcoming proposals for workshops and tutorials as a reminder
-65.04,85.2,kgc is the leading event on knowledge and graph technologies it is a technology focused conference a business focused conference and an
-75.28,97.759,industry focused conference we welcome so deep technical talk business use cases and we also welcome academic research
-86.159,108.39800000000001,presentations when they are presenting groundbreaking research or are covering state-of-the-art on a given topic
-99.04,123.28,the major selection criteria for presentation is the impact of the work uh that that is being submitted um and um we currently have multiple tracks um
-112.0,133.199,we have horizontal deep technical tracks such as graph neural networks graph analytics ontology and taxonomy
-122.64,143.281,etc and others and we have other vertical tracks such as life sciences and finance and other topics
-133.92,157.51899999999998,for workshops and tutorials workshops are then organized by a group of people on a specific topic they can range from an academic research workshop focus on a very you
-145.599,168.47799999999998,know deep narrow topic to a workshop organized by an industry group such as last year we had workshops by the enterprise knowledge craft foundation
-159.76,182.23999999999998,and tutorials on the other hand are master classes that are given by a group of experts on a specific topic
-171.04,191.6,so this is about what i had to say to say today so thank you for following and keep the conversation going
-180.56,188.88,join us on slack our linkedin and twitter thank you
+5.12,29.601,hello I'm FR sha I will in this video present you the research results in ontology mediation in the SE project we want to demonstrate that it is possible to create uniformally
+17.72,40.839999999999996,different information sources by using mediation techniques in this example we relate the databas database of the digital library
+29.08,49.12,developed by Bri Telecom to Pro the proton onology developed by onext let's first quate the the proton
+38.68,59.0,onology without using any mediation technique I have here a little
+48.6,70.84,program that load the proton onology and its Associated knowledge base into the reonal Kon it then execute a query
+64.519,87.88000000000001,here to retrieve articles from the knowledge base the query is a sparkle query let's execute it and have a look to the
+79.52,107.239,results the program connect to the Reasoner load the onology and query we can that we have two
+92.52,118.19999999999999,instances two articles returned by this query let's see now how to create the mapping between proton and the digital library using the
+105.439,129.0,tool from onto priz onto map we will now realize the mapping between proton and a digital library using onto map we have open the
+122.96,146.44,ontologies and we will try to locate the entities to be related in our case articles an article is an entity it is
+135.92,157.201,an object it is a statement an information resource a document and is published
+153.2,177.278,here is the concept article in the proton onology the database schema has no hierarchy tables are modeled as
+166.48,189.361,concept we directly find the article table and we relate it to the article concept as there are equivalent concept
+177.28,197.4,we can realize the B directional mapping conference papers are also articles and journal articles are
+188.04,212.599,obviously also articles not now that our mapping has been realized we can export it to the mapping store that will store it until we need
+200.12,221.159,it for execution time we use the mapping store result select project and the directory where it will be
+222.959,249.31900000000002,stored here is this okay the mapping has been correctly exported we can now return to our query
+238.68,259.241,program and see how the mapping will improve our results we have modified the program that now loads the mapping from the
+254.079,275.84000000000003,store into the Reser together with the proton onology and the database schema we will execute the query again and see what are the
+268.6,292.64000000000004,differences the program now open the mapping store to retrieve the mapping export it to all rules and query a
+281.4,303.0,game as we can see we have more results the two results coming from the proton knowledge base are there but now
+293.12,315.04,we also have two conference papers and two Journal articles instance we have demonstrated that using mapping
+307.16,333.761,we can integrate different information sources this can be extended to as many information sources as we want we will provide support to more
+322.88,344.0,complex queries as well as automation of the mapping discovery thank you for your attention and see you
+337.96,340.96,soon

@@ -81,7 +81,7 @@ def chat(llm,df_slides):
             
         print(len(output))
         try:
-            with open(f"output{i}.md", "w") as file:
+            with open(f"outputs/output{i}.md", "w") as file:
                 file.write(output)
         except:
             print("error")

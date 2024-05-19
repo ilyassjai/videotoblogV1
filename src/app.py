@@ -71,12 +71,18 @@ def process_youtube_link():
     openai_api_key = os.getenv('OPENAI_KEY')
 
     image_paths = [file for file in glob.glob(os.path.join('./slidemse', '*.png'))]    
-    md_paths = [f"outputs/output{i}.md" for i in range(len(image_paths))]
+    md_paths = [f"./outputs/output{i}.md" for i in range(len(image_paths))]
 
     #start
     llm = ChatOpenAI(openai_api_key=openai_api_key,model="gpt-3.5-turbo",temperature=0.5)
     df_slides=videotodataframe(youtube_link)
     chat(llm,df_slides)
+
+
+    image_paths = [file for file in glob.glob(os.path.join('./slidemse', '*.png'))]    
+    md_paths = [f"./outputs/output{i}.md" for i in range(len(image_paths))]
+
+
     merged_md = merge_markdown_with_images(md_paths, image_paths)
 
     
@@ -88,18 +94,12 @@ def process_youtube_link():
 
     # Upload the images to Google Cloud Storage
     bucket_name = 'images_for_articles'
-    for image_path in image_paths:
-        # Create a directory named after the article ID
-        directory_name = f"{article_id}"
-        # Name the image using the article ID and the original file name
-        destination_blob_name = f"{directory_name}/{os.path.basename(image_path)}"
-        upload_blob(bucket_name, image_path, destination_blob_name)
-
-    destination_blob_name = None
-
+    merged_md = merge_markdown_with_images(md_paths, image_paths)
+    print(f"Uploading {len(image_paths)} slides: {image_paths}")
     for i, image_path in enumerate(image_paths):
         # Create a directory named after the article ID
         directory_name = f"{article_id}"
+        destination_blob_name = f"{directory_name}/{os.path.basename(image_path)}"
         # Name the image using the article ID and the original file name
         destination_blob_name = f"{directory_name}/slide_{i}.png"
         upload_blob(bucket_name, image_path, destination_blob_name)
@@ -108,15 +108,16 @@ def process_youtube_link():
         # Replace the local image path with the URL in the markdown
         merged_md = merged_md.replace(image_path, image_url)
 
-    thumbnail_url = get_image_url(bucket_name, destination_blob_name)  # Use your existing function
-
+    if destination_blob_name is not None:
+        thumbnail_url = get_image_url(bucket_name, destination_blob_name)
+    else:
+        print("destination_blob_name is None")
+        thumbnail_url = None
     # Write the merged markdown to a file
     
     with open("merged_output.md", "w") as f:
         f.write(merged_md)
     title = get_title_from_md_file("merged_output.md")    
-
-    timestamp = datetime.now() + timedelta(hours=5.5)
 
     # Store the results of the API call in Firestore
     doc_ref = db.collection('articles').document(article_id)
@@ -136,8 +137,7 @@ def process_youtube_link():
         os.remove(file)
 
     # Delete the merged markdown file
-    os.remove("merged_output.md")    
-
+    os.remove("merged_output.md")
     return jsonify({'message': 'Processing completed!', 'article_id': article_id})  
 
 if __name__ == '__main__':
