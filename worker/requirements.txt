@@ -1,0 +1,15 @@
+celery[redis]
+pandas
+pytube
+opencv-python
+numpy
+pytesseract
+python-dotenv
+psutil
+tqdm
+faster-whisper
+youtube-transcript-api
+langchain
+langchain-openai
+firebase-admin
+# spacy
