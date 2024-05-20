@@ -1,3 +1,135 @@
+# Backend Documentation
+
+# 🗂️ Core Application
+
+## Overview
+
+The core application converts YouTube lecture videos into structured blog articles. It extracts slide images, transcribes video content, and generates articles in Markdown format.
+
+## Functionality
+
+- **Input:** Accepts a YouTube video link as a command-line argument.
+- **Processing:** Extracts slides and transcribes video content using AI models.
+- **Content Generation:** Combines transcribed text and slide images into a Markdown article.
+- **Integration:** Uploads slide images to Google Cloud Storage and stores article metadata in Firestore.
+- **Cleanup:** Deletes temporary files after article generation.
+
+## Usage
+
+- **Input:** Requires a YouTube video link as a command-line argument.
+- **Output:** Provides a JSON response with a message indicating processing completion and the article ID.
+
+## Environment Variables
+
+- `OPENAI_KEY`: API key for OpenAI GPT-3 model.
+- `GOOGLE_APPLICATION_CREDENTIALS`: Path to Google Cloud credentials file.
+# 🗂️ Flask Application
+
+The Flask application serves as the API endpoint for interacting with the backend.
+
+### Endpoint: /process-youtube-link (POST)
+
+Endpoint to receive YouTube video conversion requests from the client.
+
+#### Method: POST
+- Body Parameters:
+  - `youtubeLink` (str): YouTube video link to be processed.
+- Returns:
+  - JSON object: `{ "taskId": "<task_id>" }`, where `task_id` is the ID of the Celery task for asynchronous processing.
+
+### Endpoint: /simple_start_task (GET)
+
+Endpoint to manually start a simple Celery task.
+
+#### Method: GET
+- Returns:
+  - Task ID of the started Celery task.
+
+### Endpoint: /simple_task_status/<task_id> (GET)
+
+Endpoint to check the status of a Celery task.
+
+#### Method: GET
+- Path Parameter:
+  - `task_id` (str): ID of the Celery task.
+- Returns:
+  - Status of the Celery task.
+
+### Endpoint: /simple_task_result/<task_id> (GET)
+
+Endpoint to retrieve the result of a completed Celery task.
+
+#### Method: GET
+- Path Parameter:
+  - `task_id` (str): ID of the Celery task.
+- Returns:
+  - JSON object: `{ "result": <task_result> }`, where `task_result` is the result of the Celery task.
+
+### Endpoint: /all_tasks_status (GET)
+
+Endpoint to get the status of all registered Celery tasks.
+
+#### Method: GET
+- Returns:
+  - JSON object containing information about all registered Celery tasks.
+
+# 🗂️ Celery Tasks
+
+## Long Running Task (task for testing)
+
+### Function: longtime_add
+
+A Celery task that simulates a long-running process by sleeping for 10 seconds.
+
+#### Arguments:
+- `x` (int): First integer operand.
+- `y` (int): Second integer operand.
+
+#### Returns:
+- `int`: The product of `x` and `y`.
+
+## YouTube Video Processing Task
+
+### Function: youtube_link_process
+
+A Celery task that processes a YouTube video link to convert it into a blog article.
+
+#### Arguments:
+- `youtube_link` (str): YouTube video link to be processed.
+
+#### Returns:
+- `dict` or `str`: Dictionary containing the processed output if successful, or an error message if the subprocess fails or the output file cannot be read.
+
+## 🖥️ Docker Instructions
+
+To start the dockerized app:
+1. Make sure your Docker daemon is running.
+2. Open terminal and navigate to the root directory.
+3. Type: `docker-compose up --build`
+   This will build and start the Docker containers.
+4. To stop the containers, type: `docker-compose down`
+
+To start apps separately:
+- Navigate to the directory of the part you want to run separately:
+  - `cd flask_app` or `cd core_app`
+- Create and activate a virtual environment:
+  1. Install virtualenv package if not already installed:
+     - On Windows: `python -m pip install virtualenv`
+     - On macOS/Linux: `pip3 install virtualenv`
+  2. Create a new virtual environment:
+     - On Windows: `python -m venv my_venv`
+     - On macOS/Linux: `python3 -m venv my_venv`
+  3. Activate the virtual environment:
+     - On Windows: `my_venv\Scripts\activate`
+     - On macOS/Linux: `source my_venv/bin/activate`
+- Install required libraries from requirements.txt:
+  - `pip install -r requirements.txt`
+- Start the application:
+  - For flask_app, run: `python src/app.py`
+  - For core_app, run: `python src/main.py`
+
+
+# 📝 Example of a Blog Post:
 ## Presentation Summary
 
 In this presentation, Fran Sharf from Data Chefs discusses Enterprise Intelligence applications in the Private Equity and Investment Banking industry. The talk focuses on a consulting engagement with Data Chefs, highlighting the integration of Enterprise Intelligence tools in the financial sector.
